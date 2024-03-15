@@ -140,6 +140,7 @@ window.onload=startclock;
 			<li class="active"><a href="products.php"><i class="icon-list-alt icon-2x"></i> Products</a>                                     </li>
 			<li><a href="customer.php"><i class="icon-group icon-2x"></i> Customers</a>                                    </li>
 			<li><a href="supplier.php"><i class="icon-group icon-2x"></i> Suppliers</a>                                    </li>
+			<li><a href="inventory.php"><i class="icon-list-alt icon-2x"></i>Inventory</a> </li>
 			<li><a href="salesreport.php?d1=0&d2=0"><i class="icon-bar-chart icon-2x"></i> Sales Report</a>                </li>
 
 
@@ -198,11 +199,10 @@ window.onload=startclock;
 	<thead>
 		<tr>
 			<th width="12%"> Brand Name </th>
-			<th width="14%"> Generic Name </th>
+			<th width="14%"> Product Name </th>
 			<th width="13%"> Category / Description </th>
 			<th width="7%"> Supplier </th>
 			<th width="9%"> Date Received </th>
-			<th width="10%"> Expiry Date </th>
 			<th width="6%"> Original Price </th>
 			<th width="6%"> Selling Price </th>
 			<th width="6%"> QTY </th>
@@ -244,11 +244,10 @@ window.onload=startclock;
 		
 
 			<td><?php echo $row['product_code']; ?></td>
-			<td><?php echo $row['gen_name']; ?></td>
-			<td><?php echo $row['product_name']; ?></td>
+			<td><?php echo $row['name']; ?></td>
+			<td><?php echo $row['desc']; ?></td>
 					<td><?php echo $row['supplier']; ?></td>
 			<td><?php echo $row['date_arrival']; ?></td>
-			<td><?php echo $row['expiry_date']; ?></td>
 			<td><?php
 			$oprice=$row['o_price'];
 			echo formatMoney($oprice, true);
