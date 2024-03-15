@@ -12,7 +12,7 @@
               <li><a><i class="icon-user icon-large"></i> Welcome:<strong> <?php echo $_SESSION['SESS_LAST_NAME'];?></strong></a></li>
 			 <li><a> <i class="icon-calendar icon-large"></i>
 								<?php
-								$Today = date('y:m:d',mktime());
+								$Today = date('Y-m-d', time());
 								$new = date('l, F d, Y', strtotime($Today));
 								echo $new;
 								?>
